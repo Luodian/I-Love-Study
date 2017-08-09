@@ -1,6 +1,7 @@
 package com.example.luodian.i_love_study;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +11,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.zxing.Result;
+import com.google.zxing.client.result.ParsedResult;
+import com.google.zxing.client.result.ParsedResultType;
+import com.mylhyl.zxing.scanner.ScannerView;
+
 public class QRActivity extends AppCompatActivity
 {
+    private ScannerView mScannerView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,6 +28,8 @@ public class QRActivity extends AppCompatActivity
         setSupportActionBar(myToolBar);
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        mScannerView = (ScannerView) findViewById(R.id.qr_scanner_view);
     }
 
     @Override
@@ -42,4 +51,24 @@ public class QRActivity extends AppCompatActivity
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onResume()
+    {
+        mScannerView.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause()
+    {
+        mScannerView.onPause();
+        super.onPause();
+    }
+
+    void onScannerCompletion(Result rawResult, ParsedResult parsedResult, Bitmap barcode)
+    {
+        ParsedResultType type = parsedResult.getType();
+    }
+
 }

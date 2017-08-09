@@ -12,9 +12,9 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_gravity="top"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.mylhyl.zxing.scanner.ScannerView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_gravity="center"
-        android:src = "@drawable/cat"/>
+        android:id = "@+id/qr_scanner_view" />
 </FrameLayout>
