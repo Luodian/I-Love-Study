@@ -13,8 +13,8 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_gravity="top"/>
     <com.mylhyl.zxing.scanner.ScannerView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:id = "@+id/qr_scanner_view" />
+        android:id = "@+id/qr_scanner_view"/>
 </FrameLayout>

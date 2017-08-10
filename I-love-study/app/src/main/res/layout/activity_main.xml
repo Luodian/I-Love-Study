@@ -21,6 +21,7 @@
         android:id = "@+id/qr_button"
         android:layout_gravity="center"
         android:text="QR Scanner"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:elevation="4dp" />
 
 </FrameLayout>

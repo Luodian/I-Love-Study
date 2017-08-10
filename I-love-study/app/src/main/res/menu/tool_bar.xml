@@ -6,4 +6,9 @@
         android:orderInCategory="1"
         android:id = "@+id/tb_settings"
         app:showAsAction = "ifRoom"/>
+    <item
+        android:title="Photos"
+        android:orderInCategory="1"
+        android:id = "@+id/tb_photos"
+        app:showAsAction="ifRoom"/>
 </menu>
