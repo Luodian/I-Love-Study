@@ -17,4 +17,16 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:id = "@+id/qr_scanner_view"/>
+
+    <TextView
+        android:id="@+id/tv_sentences"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginBottom="80dp"
+        android:background="#99808080"
+        android:textSize="18sp"
+        android:text="I LOVE STUDY, STUDY MAKES ME HAPPY."/>
 </FrameLayout>
